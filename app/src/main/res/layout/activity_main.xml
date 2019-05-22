@@ -5,16 +5,47 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="@color/colorAccent">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Movie chosen..."
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/selectedMovie"
-            app:layout_constraintVertical_bias="0.266" android:fontFamily="@font/peralta" android:textSize="24sp"/>
+            android:id="@+id/selectedMovie"
+            android:fontFamily="@font/peralta" android:textSize="24sp"
+            android:layout_marginTop="40dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/addMovieTextField"/>
+    <Button
+            android:text="Randomize"
+            android:layout_width="422dp"
+            android:layout_height="73dp"
+            android:id="@+id/randomizeButton" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintBottom_toBottomOf="parent" android:textColor="@android:color/background_light"
+            android:background="@color/colorPrimary" android:fontFamily="@font/peralta" android:textSize="18sp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/addMovieTextField"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/selectedMovie"
+            android:hint="Add a movie..."
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/addMovieButton" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="Add Movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addMovieButton" android:fontFamily="@font/peralta"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/addMovieTextField" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
 
 </android.support.constraint.ConstraintLayout>
