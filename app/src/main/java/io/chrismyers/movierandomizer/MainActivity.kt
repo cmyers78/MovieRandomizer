@@ -16,8 +16,15 @@ class MainActivity : AppCompatActivity() {
 
         randomizeButton.setOnClickListener {
             val random = Random()
-            val randomFood = random.nextInt(movieList.count())
-            selectedMovie.text = randomFood.toString()
+            val randomMovie = random.nextInt(movieList.count())
+            selectedMovie.text = movieList[randomMovie]
+        }
+
+        addMovieButton.setOnClickListener {
+            val movie = addMovieTextField.text.toString()
+            movieList.add(movie)
+            addMovieTextField.text.clear()
+            println(movieList)
         }
     }
 }
