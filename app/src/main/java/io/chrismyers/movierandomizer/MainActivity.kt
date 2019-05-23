@@ -3,6 +3,8 @@ package io.chrismyers.movierandomizer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import java.net.HttpURLConnection
+import java.net.URL
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +27,12 @@ class MainActivity : AppCompatActivity() {
             movieList.add(movie)
             addMovieTextField.text.clear()
             println(movieList)
+
         }
+
+    }
+
+    fun throwAway(): String {
+        return "Thrownaway"
     }
 }
